@@ -6,7 +6,7 @@ foods = {"popcorn": 6.44,
 quantities = []
 cart = []
 total = 0
-x=0
+ordered_num=0
 
 while True:
     print("\n------------Menu---------------")
@@ -15,7 +15,7 @@ while True:
     print("-------------------------------\n\n")
     print("------------Cart---------------")
     print("Your order are: ")
-    for i in range(x):
+    for i in range(ordered_num):
         print(f"{cart[i]:10}: {quantities[i]}")
     print("-------------------------------\n\n")
 
@@ -31,7 +31,7 @@ while True:
         cart.append(item)
         quantities.append(quantity)
         total += foods[item] * quantity
-        x+=1
+        ordered_num+=1
 
 
-print(f"Your total is: ${total}")
+print(f"Your total is: ${total:.2f}")
